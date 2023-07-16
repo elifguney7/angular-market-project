@@ -1,1 +1,12 @@
-<p>profile works!</p>
+<div>
+    <div class="login-error">{{ authError }}</div>
+    <table class="profile-data">
+        
+        <tr *ngFor="let entry of profileData | keyvalue">
+          <td>{{ entry.key }}</td>
+          <td>{{ entry.value }}</td>
+        </tr>
+      </table>
+      <button [routerLink]="['/profile/balances']">balances</button>
+      <button [routerLink]="['/profile/direct-orders']">Driect orders</button>
+</div>

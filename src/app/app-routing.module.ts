@@ -4,6 +4,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { BalancesComponent } from './components/balances/balances.component';
+import { DirectOrderComponent } from './components/direct-order/direct-order.component';
 
 import { MarketsComponent } from './components/markets/markets.component';
 
@@ -11,7 +13,11 @@ const routes: Routes = [
   {path : '' , component: HomepageComponent},
   {path : 'login' , component: LoginComponent  },
   {path : 'logout' , component: LogoutComponent  },
-  {path : 'profile' , component: ProfileComponent  },
+  {path : 'profile' , component: ProfileComponent,
+    children:[
+      {path: 'balances', component: BalancesComponent},
+      {path: 'direct-orders', component: DirectOrderComponent}
+    ]  },
   {path : 'markets' , component: MarketsComponent  },
 
 ];

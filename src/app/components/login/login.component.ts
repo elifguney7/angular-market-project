@@ -53,7 +53,8 @@ export class LoginComponent {
 
           this.http.post<any>(meEndpointURL, {}, meHttpOptions).subscribe({
             next: meResponse => {              
-              console.log('Auth success:', meResponse);              
+              console.log('Auth success:', meResponse);      
+             
             }, 
             error:error => {
               // Handle /auth/me error

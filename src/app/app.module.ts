@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { BalancesComponent } from './components/balances/balances.component';
+import { DirectOrderComponent } from './components/direct-order/direct-order.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     LogoutComponent,
     HeaderComponent,
     FooterComponent,
-    HomepageComponent
+    HomepageComponent,
+    BalancesComponent,
+    DirectOrderComponent
   ],
   imports: [
     BrowserModule,
