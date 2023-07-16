@@ -1,1 +1,8 @@
-<p>header works!</p>
+<div >
+    <img src="assets/bitlo-logo.png" [routerLink] ="['/']" alt="logo" style="width:100px;height:60px;">
+    <div class = "header-buttons">
+        <button *ngIf="!loggedIn" mat-raised-button [routerLink]="['/login']">Login</button>
+        <button *ngIf="loggedIn" mat-raised-button (click)="logout()">Logout</button>
+      </div>
+    
+</div>

@@ -1,1 +1,28 @@
-<p>login works!</p>
+<!-- Assuming you have imported the required modules -->
+
+<div class="container">
+    <div class="login-form">
+      <form #loginForm="ngForm" (ngSubmit)="submitForm(loginForm)">
+        <h2>Login</h2>
+        <mat-form-field>
+          <input [(ngModel)]="username" name="username" placeholder="Username" email="true" required #usernameInput="ngModel">
+          
+        </mat-form-field>
+        <mat-form-field>
+          <input [(ngModel)]="password" name="password" matInput placeholder="Password" type="password" required #passwordInput="ngModel">
+          
+        </mat-form-field>
+        <div *ngIf="submitClicked">
+            <div *ngIf="usernameInput.errors?.['required'] && passwordInput.errors?.['required'] else oneField">Fill the required fields.</div>
+            <ng-template #oneField>
+                <div *ngIf="usernameInput.errors?.['required']">Username required.</div>
+                <div *ngIf="passwordInput.errors?.['required']">Password required.</div>
+                <div *ngIf="usernameInput.errors?.['email']">Invalid email format.</div>
+            </ng-template>                       
+          </div>
+          <div class="error-message" *ngIf="loginError">{{ loginError }}</div>
+        <button mat-raised-button color="primary" (click)="submitClicked = true">Login</button>
+      </form>
+    </div>
+  </div>
+  

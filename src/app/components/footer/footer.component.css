@@ -1,0 +1,12 @@
+*{
+    background-color: #0a2363;
+    color: #ffffff;
+    padding-top: 0.5%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: flex-end;
+}
