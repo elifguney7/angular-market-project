@@ -1,12 +1,40 @@
 <div>
     <div class="login-error">{{ authError }}</div>
-    <table class="profile-data">
-        
-        <tr *ngFor="let entry of profileData | keyvalue">
-          <td>{{ entry.key }}</td>
-          <td>{{ entry.value }}</td>
-        </tr>
-      </table>
-      <button [routerLink]="['/profile/balances']">balances</button>
-      <button [routerLink]="['/profile/direct-orders']">Driect orders</button>
+    <h2>Welcome to Your Profile</h2>
+
+<table>
+  
+  <tr>
+    <td>First Name</td>
+    <td>{{ profileData.firstName }}</td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td>{{ profileData.lastName }}</td>
+  </tr>
+  <tr>
+    <td>Date of Birth</td>
+    <td>{{ formatDate(profileData.dateOfBirth)}}</td>
+  </tr>
+  <tr>
+    <td>Phone Number</td>
+    <td>{{ formatPhoneNumber(profileData.phoneNumber) }}</td>
+  </tr>
+  <tr>
+    <td>Identity Number</td>
+    <td>{{ profileData.identityNumber }}</td>
+  </tr>
+  <tr>
+    <td>Update Date</td>
+    <td>{{ formatUpdateDate(profileData.updateDate) }}</td>
+  </tr>
+</table>
+<button [routerLink]="['/markets']" >market</button>
+
+<nav>
+    <a [routerLink]="['balances']">Balances</a><br>
+    <a [routerLink]="['direct-orders']">Direct Orders</a>
+  </nav>
+  <router-outlet></router-outlet>
+      
 </div>

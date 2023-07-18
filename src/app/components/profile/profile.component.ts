@@ -47,6 +47,29 @@ export class ProfileComponent implements OnInit {
   }
 
 
+  formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+    return date.toLocaleDateString('tr-TR', options);
+  }
+
+  formatPhoneNumber(phoneNumber: string): string {
+    const countryCode = phoneNumber.substring(0, 3);
+    const areaCode = phoneNumber.substring(3, 6);
+    const firstPart = phoneNumber.substring(6, 9);
+    const secondPart = phoneNumber.substring(9, 11);
+    const thirdPart = phoneNumber.substring(11, 13);
+    
+    return `${countryCode} ${areaCode} ${firstPart} ${secondPart} ${thirdPart}`;
+  }
+
+  formatUpdateDate(uDateString: string): string {
+   const firstPart = uDateString.substring(0,10);
+   const secondPart = uDateString.substring(10,27);
+   return `${firstPart} ${secondPart} `;
+
+    
+  }
 
 
 }

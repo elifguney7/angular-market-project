@@ -1,1 +1,58 @@
-<p>markets works!</p>
+<div>
+    <input type="text" [(ngModel)]="searchValue" (keyup)="filterMarkets()" placeholder="Search Market Code">
+  </div>
+
+  <table *ngIf="filteredMarketsData.length > 0">
+    <thead>
+      <tr>
+        <th>Line</th>
+        <th>Market Code</th>
+        <th>Current Quote</th>
+        <th>24h Change</th>
+        <th>24h Change Percent</th>
+        <th>Highest Quote 24h</th>
+        <th>Lowest Quote 24h</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let market of filteredMarketsData; let i = index;">
+        <td>{{ i + 1 }}</td>
+        <td ><a [routerLink]="['market-details']" >{{ market.marketCode }} </a></td>        
+        <td>{{ market.currentQuote | number }}</td>
+        <td>{{ market.change24h | number }}</td>
+        <td [style]="customizeChangeRatio(market.change24hPercent)">{{ market.change24hPercent | number }} </td>
+        <td>{{ market.highestQuote24h | number }}</td>
+        <td>{{ market.lowestQuote24h | number }}</td>       
+      </tr>
+    </tbody>
+  </table>
+
+
+  
+  <ul>
+    <li *ngIf="i >= 0">Today, the price change percentage is positive for {{ i }} markets.</li>
+    <li *ngIf="filteredMarketsData.length > 0">
+      The market with the highest increase ({{ calculateMaxIncreaseMarket(filteredMarketsData).change24hPercent }}) is {{ calculateMaxIncreaseMarket(filteredMarketsData).marketCode }}.
+    </li>
+    <li *ngIf="filteredMarketsData.length > 0">
+      The market with the highest decrease ({{ calculateMaxDecreaseMarket(filteredMarketsData).change24hPercent }}) is {{ calculateMaxDecreaseMarket(filteredMarketsData).marketCode }}.
+    </li>
+    <li *ngIf="filteredMarketsData.length > 0">
+      There are {{ calculateMarketAboveThreshold(filteredMarketsData, 10000) }} markets with a price above (currentQuote) 10,000 TRY.
+    </li>
+    <li *ngIf="filteredMarketsData.length > 0">
+      There are {{ calculateMarketBelowThreshold(filteredMarketsData, 1) }} markets with a price below (currentQuote) 1.00 TRY.
+    </li>
+    <li *ngIf="filteredMarketsData.length > 0">
+      The arithmetic average of all market prices is (currentQuote) {{ calculateAverageQuote(filteredMarketsData) | number: '1.2-2' }} TRY.
+    </li>
+    
+  </ul>
+  
+ 
+
+  <router-outlet></router-outlet>
+  <div *ngIf="filteredMarketsData.length === 0">
+    There is no matched value!
+  </div>
+  

@@ -1,0 +1,21 @@
+/* markets.component.css */
+
+
+table {
+    margin-left: 10%;
+    width:80%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-right: 12px;
+    padding-left: 2px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  

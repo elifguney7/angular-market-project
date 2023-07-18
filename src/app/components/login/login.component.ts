@@ -40,12 +40,9 @@ export class LoginComponent {
           console.log('Login successful!', response);
           this.loggedIn = true;
           this.authToken = response.token;
-
           localStorage.setItem('authToken', this.authToken);
-
           this.router.navigate(['/profile']);
           
-
           const meEndpointURL = 'https://akademi-cp.bitlo.com/api/interview/auth/me';
           const meHttpOptions = {
             headers: new HttpHeaders({ 'x-bitlo-auth': this.authToken })

@@ -8,6 +8,7 @@ import { BalancesComponent } from './components/balances/balances.component';
 import { DirectOrderComponent } from './components/direct-order/direct-order.component';
 
 import { MarketsComponent } from './components/markets/markets.component';
+import { MarketDetailsComponent } from './components/market-details/market-details.component';
 
 const routes: Routes = [  
   {path : '' , component: HomepageComponent},
@@ -18,7 +19,10 @@ const routes: Routes = [
       {path: 'balances', component: BalancesComponent},
       {path: 'direct-orders', component: DirectOrderComponent}
     ]  },
-  {path : 'markets' , component: MarketsComponent  },
+  {path : 'markets' , component: MarketsComponent,
+    children:[
+    {path: 'market-details', component: MarketDetailsComponent}
+    ]  },
 
 ];
 

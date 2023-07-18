@@ -19,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BalancesComponent } from './components/balances/balances.component';
 import { DirectOrderComponent } from './components/direct-order/direct-order.component';
+import { MarketDetailsComponent } from './components/market-details/market-details.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DirectOrderComponent } from './components/direct-order/direct-order.com
     FooterComponent,
     HomepageComponent,
     BalancesComponent,
-    DirectOrderComponent
+    DirectOrderComponent,
+    MarketDetailsComponent
   ],
   imports: [
     BrowserModule,
