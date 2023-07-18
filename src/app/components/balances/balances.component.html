@@ -1,1 +1,19 @@
-<p>balances works!</p>
+<label>
+    <input type="checkbox"  [(ngModel)]="showLowBalances"  checked (change)="filterBalances()"> Düşük Bakiyeleri Göster / Gizle
+  </label>
+<table>
+    <thead>
+      <tr *ngIf="filteredBalances.length > 0">
+        <th>assetCode</th>
+        <th>availableAmount </th>
+        <th>availableAmountTRYValue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let balance of filteredBalances">            
+        <td>{{ balance.assetCode }}</td>
+        <td>{{ balance.availableAmount | number }}</td>
+        <td>{{ balance.availableAmountTRYValue | number }}</td>
+      </tr>
+    </tbody>
+  </table>
