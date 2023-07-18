@@ -32,7 +32,7 @@ export class BalancesComponent implements OnInit {
       next: (data: any) => {
         console.log(data); // Log the API response to check its structure
         this.balancesData = data.balances; // Extract the balances array from the response
-    this.filterBalances();
+        this.filterBalances();
 
       },
       error: error => {
