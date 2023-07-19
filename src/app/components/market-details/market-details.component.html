@@ -1,1 +1,10 @@
-<p>market-details works!</p>
+<ul *ngFor="let market of marketsData">    
+    <li >marketCode: {{ customizeMarketCode(market.marketCode) }} </li>        
+    <li>currentQuote: {{ market.currentQuote | number }}</li>
+    <li>change24h: {{ market.change24h | number }}</li>
+    <li [style]="customizeChangeRatio(market.change24hPercent)"> {{ market.change24hPercent | number }} </li>
+    <li>highestQuote24h: {{ market.highestQuote24h | number }}</li>
+    <li>lowestQuote24h: {{ market.lowestQuote24h | number }}</li>     
+    <br>  
+    <img [src]="market.logoUrl" alt="{{ getBaseAssetCode(market.marketCode) }}" style="height: 100x ;width: 100px;">
+</ul>

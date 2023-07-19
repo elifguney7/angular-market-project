@@ -1,7 +1,7 @@
-// markets.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DecimalPipe } from '@angular/common';
+import { Market } from 'src/app/market.interface';
 
 @Component({
   selector: 'app-markets',
@@ -10,8 +10,8 @@ import { DecimalPipe } from '@angular/common';
   providers: [DecimalPipe],
 })
 export class MarketsComponent implements OnInit {
-  marketsData!: any[]; 
-  filteredMarketsData!: any[];
+  marketsData: Market[] = []; 
+  filteredMarketsData: Market[] = [];
   searchValue: string = '';
   i: number = 0;
 
@@ -46,8 +46,8 @@ export class MarketsComponent implements OnInit {
     this.i = this.calculatePositiveChangeRatio(this.filteredMarketsData);
   }
 
-  customizeChangeRatio(changeRatio: string): any {
-    const numericChangeRatio = Number(changeRatio);
+  customizeChangeRatio(changeRatio: number): any {
+    const numericChangeRatio =changeRatio;
   
     if (numericChangeRatio < 0) {
       return { color: 'red' };

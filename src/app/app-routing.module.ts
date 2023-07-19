@@ -19,10 +19,8 @@ const routes: Routes = [
       {path: 'balances', component: BalancesComponent},
       {path: 'direct-orders', component: DirectOrderComponent}
     ]  },
-  {path : 'markets' , component: MarketsComponent,
-    children:[
-    {path: 'market-details', component: MarketDetailsComponent}
-    ]  },
+  {path : 'markets' , component: MarketsComponent,},
+  { path: 'market-details/:marketCode', component: MarketDetailsComponent },
 
 ];
 

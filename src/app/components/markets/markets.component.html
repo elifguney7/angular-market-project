@@ -17,7 +17,7 @@
     <tbody>
       <tr *ngFor="let market of filteredMarketsData; let i = index;">
         <td>{{ i + 1 }}</td>
-        <td ><a [routerLink]="['market-details']" >{{ market.marketCode }} </a></td>        
+        <td><a [routerLink]="['/market-details', market.marketCode]">{{ market.marketCode }}</a></td>    
         <td>{{ market.currentQuote | number }}</td>
         <td>{{ market.change24h | number }}</td>
         <td [style]="customizeChangeRatio(market.change24hPercent)">{{ market.change24hPercent | number }} </td>
