@@ -27,8 +27,7 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  getProfileData() {
-    
+  getProfileData() {    
     const meEndpointURL = 'https://akademi-cp.bitlo.com/api/interview/auth/me';
     const meHttpOptions = {
       headers: new HttpHeaders({ 'x-bitlo-auth': this.authToken })

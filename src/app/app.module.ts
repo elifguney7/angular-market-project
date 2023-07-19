@@ -14,12 +14,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BalancesComponent } from './components/balances/balances.component';
 import { DirectOrderComponent } from './components/direct-order/direct-order.component';
 import { MarketDetailsComponent } from './components/market-details/market-details.component';
+import { AuthGuard } from './auth/auth.guard.service';  
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { MarketDetailsComponent } from './components/market-details/market-detai
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

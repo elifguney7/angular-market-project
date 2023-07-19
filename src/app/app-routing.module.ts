@@ -6,15 +6,15 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { BalancesComponent } from './components/balances/balances.component';
 import { DirectOrderComponent } from './components/direct-order/direct-order.component';
-
 import { MarketsComponent } from './components/markets/markets.component';
 import { MarketDetailsComponent } from './components/market-details/market-details.component';
+import { AuthGuard } from './auth/auth.guard.service';
 
 const routes: Routes = [  
   {path : '' , component: HomepageComponent},
   {path : 'login' , component: LoginComponent  },
   {path : 'logout' , component: LogoutComponent  },
-  {path : 'profile' , component: ProfileComponent,
+  {path : 'profile' , component: ProfileComponent, canActivate: [AuthGuard] ,
     children:[
       {path: 'balances', component: BalancesComponent},
       {path: 'direct-orders', component: DirectOrderComponent}
