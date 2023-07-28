@@ -1,5 +1,6 @@
 <div>
-    <input type="text" [(ngModel)]="searchValue" (keyup)="filterMarkets()" placeholder="Search Market Code">
+    <input type="text" [(ngModel)]="searchValue" (keyup)="filterMarkets()" placeholder="Search Market Code" 
+    style="margin-top: 1%; margin-left: 10%; font-size: 18px;">
   </div>
 
   <table *ngIf="filteredMarketsData.length > 0">

@@ -1,6 +1,9 @@
 <div>
     <div class="login-error">{{ authError }}</div>
-    <h2>Welcome to Your Profile</h2>
+
+    <div class="profile_title">
+      <h2>Welcome to Your Profile</h2>
+    </div>
 
 <table>
   
@@ -28,13 +31,10 @@
     <td>Update Date</td>
     <td>{{ formatUpdateDate(profileData.updateDate) }}</td>
   </tr>
-</table>
-<button [routerLink]="['/markets']" >market</button>
-
-<nav>
-    <a [routerLink]="['balances']">Balances</a><br>
-    <a [routerLink]="['direct-orders']">Direct Orders</a>
-  </nav>
-  <router-outlet></router-outlet>
+</table>  
+  <button class="market_button" [routerLink]="['balances']">Balances</button>
+  <button class="market_button" [routerLink]="['direct-orders']">Direct Orders</button>
+  <button class="market_button_right" [routerLink]="['/markets']" >Market -></button>
+<router-outlet></router-outlet>
       
 </div>

@@ -26,6 +26,7 @@ export class MarketsComponent implements OnInit {
     this.http.get<any[]>('https://akademi-cp.bitlo.com/api/interview/markets').subscribe(
       (data) => {
         this.marketsData = data;
+        this.filteredMarketsData = data;
       },
       (error) => {
         console.error('Error fetching markets data:', error);

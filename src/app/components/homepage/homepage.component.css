@@ -1,6 +1,29 @@
 .container{
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.main-page_card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a2363;
+  color: #f6f6f6;
+  font-size: 18px;
+  text-align: center;
+  width: 25%;
+  height: 25%;
+  border-radius: 13px;
+  padding: 22px 1px ;
+}
+
+.text {
+  text-align: center;
+}
+
+a {
+  color: #f6f6f6;  
+}
+

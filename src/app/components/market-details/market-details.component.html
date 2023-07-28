@@ -1,4 +1,6 @@
-<ul *ngFor="let market of marketsData">    
+
+<ul *ngFor="let market of marketsData" >    
+    <p class="details_heading">Details of selected coin: </p>
     <li >marketCode: {{ customizeMarketCode(market.marketCode) }} </li>        
     <li>currentQuote: {{ market.currentQuote | number }}</li>
     <li>change24h: {{ market.change24h | number }}</li>
