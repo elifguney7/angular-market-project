@@ -1,12 +1,23 @@
-*{
-    background-color: #0a2363;
-    color: #ffffff;
-    padding-top: 0.5%;
-    padding-right: 0.5%;
-    padding-left: 0.5%;
+:host {
+    display: block;
+    background-color: #0a2363;    
+}  
+
+.footer-cont {
+    color: #ffffff ;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.footer-cont p {
+    margin: 0;
 }
 
-.footer-link {
-    display: flex;
-    justify-content: flex-end;
+.footer-cont a {
+    color: #ffffff ;
+    font-size: 16px;
 }
+
