@@ -42,7 +42,7 @@ th, td {
 }
 
 table tr td:first-child {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-bg-gray);
   font-weight: 500;
 } 
 
@@ -59,7 +59,6 @@ tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
 
-
 .profile-button-container {
   width: 90%;
   display: flex;
@@ -73,10 +72,7 @@ tr:last-child td:last-child {
 
 .profile-button-container button {
   font-family: 'Roboto';
-  background-color: #0a2363;
-  color: #fff;
   border: none;
-  font-weight: 400;  
   font-size: 16px;
   border-radius: 5px;
   padding: 0.75rem;
@@ -84,6 +80,9 @@ tr:last-child td:last-child {
   cursor: pointer;
 }
 
+.button_navy {
+  background-color: var(--color-bg-navy);
+}
 
 
 

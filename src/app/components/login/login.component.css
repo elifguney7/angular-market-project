@@ -1,11 +1,21 @@
 .container{
-    height: 71vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-.login-form{
+.login-form {
   height: fit-content;
-  width: 200px; 
-  
+  width: 210px; 
+
 } 
+
+button {
+  font-family: 'Roboto';
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 1rem;
+  min-width: 212px;
+  cursor: pointer;
+}

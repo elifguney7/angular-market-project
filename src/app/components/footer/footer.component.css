@@ -1,6 +1,6 @@
 :host {
     display: block;
-    background-color: #0a2363;    
+    background: var(--color-bg-navy);
 }  
 
 .footer-cont {

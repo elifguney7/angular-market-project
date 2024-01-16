@@ -6,29 +6,43 @@
 table {
     margin-bottom: 1%;
     margin-top: 1%;
-    width:80%;
-    border-collapse: collapse;
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 16px;
     border-radius: 10px; 
     overflow: hidden;
 }
 
 table a {
-  color: var(--color-light-gray);
+  color: var(--color-text);
 }
   
 table th {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-bg-gray);
   font-weight: 500;
 }
 
 th, td {
-  border: 1px solid #ccc;
+  border: 1.5px solid #ccc;
   padding: 10px;
   padding-right: 12px;
   padding-left: 12px;
   height: 30px;
 
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 .searchbar input{
@@ -39,7 +53,6 @@ th, td {
   outline: none;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  margin-left: 10%; 
   font-size: 18px;
 }
 

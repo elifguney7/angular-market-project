@@ -1,8 +1,12 @@
 <div class="header-cont">
     <img src="assets/bitlo-logo.png" [routerLink] ="['/']" alt="logo" style="width:100px;height:60px;">
+    <div class="header-navs">
+      <a [routerLink]="['/markets']">Market</a>
+      <a [routerLink]="['/profile']">Profile</a>
+    </div>
     <div class = "header-buttons">
-        <button *ngIf="!loggedIn" mat-raised-button [routerLink]="['/login']">Login</button>
-        <button *ngIf="loggedIn" mat-raised-button (click)="logout()">Logout</button>
+        <button *ngIf="!loggedIn"  [routerLink]="['/login']">Login</button>
+        <button *ngIf="loggedIn"  (click)="logout()">Logout</button>
       </div>
     
 </div>
