@@ -13,6 +13,10 @@
     padding: 0 2rem;
 }
 
+.header-cont img {
+    cursor: pointer;
+}
+
 .header-buttons{
     display: flex;    
     justify-content: flex-end;

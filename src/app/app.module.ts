@@ -20,7 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { BalancesComponent } from './components/balances/balances.component';
 import { DirectOrderComponent } from './components/direct-order/direct-order.component';
 import { MarketDetailsComponent } from './components/market-details/market-details.component';
-import { AuthGuard } from './auth/auth.guard.service';  
+import { AuthGuard } from './auth/auth.guard.service';
+import { ContentContainerComponent } from './components/content-container/content-container.component';  
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AuthGuard } from './auth/auth.guard.service';
     HomepageComponent,
     BalancesComponent,
     DirectOrderComponent,
-    MarketDetailsComponent
+    MarketDetailsComponent,
+    ContentContainerComponent
   ],
   imports: [
     BrowserModule,

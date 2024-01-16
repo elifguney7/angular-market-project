@@ -1,10 +1,11 @@
 <div class="profile-container">
     <div class="login-error">{{ authError }}</div>
+
     <div class="profile_title">
       <h2>Welcome to Your Profile</h2>
     </div>
 
-  <table>    
+  <table >    
     <tr>
       <td>First Name</td>
       <td>{{ profileData.firstName }}</td>
@@ -30,10 +31,12 @@
       <td>{{ formatUpdateDate(profileData.updateDate) }}</td>
     </tr>
   </table>  
-  <div class="profile-button-container">
-    <button class="market_button" [routerLink]="['balances']">Balances</button>
-    <button class="market_button" [routerLink]="['direct-orders']">Direct Orders</button>
-    <button class="market_button_right" [routerLink]="['/markets']" >Market -></button>
+  <div class="profile-button-container">    
+    <div class="market_button_left-container">
+      <button [routerLink]="['balances']">Balances</button>
+      <button [routerLink]="['direct-orders']">Direct Orders</button>
+    </div>
+    <button [routerLink]="['/markets']" >Market -></button>
   </div>
 
   <router-outlet></router-outlet>

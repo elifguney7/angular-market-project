@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg-gray: #191E29;
+  --color-bg-navy : #132D46;
+  --color-light-gray: #696e79;
+  --color-subtext: #01C38D;
+  --color-text: #FFFFFF;
+}
+
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-gray);
+  color: var(--color-text);
 }
 
 app-root {
@@ -24,12 +41,17 @@ app-header {
   z-index: 100; /* Ensure the header stays above other elements */
 }
 
-router-outlet {
+app-content-container {
   flex-grow: 1;
-  overflow-y: auto; /* Add scroll if content is taller than the viewport */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Adjust alignment as needed */
+  align-items: center; 
+  justify-content: center;
+  overflow-y: auto; 
+}
+
+router-outlet {
+  width: 100%;
 }
 
 app-footer {

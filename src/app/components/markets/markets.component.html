@@ -1,6 +1,6 @@
 <div>
-    <input type="text" [(ngModel)]="searchValue" (keyup)="filterMarkets()" placeholder="Search Market Code" 
-    style="margin-top: 1%; margin-left: 10%; font-size: 18px;">
+  <div class="searchbar">
+    <input type="text" [(ngModel)]="searchValue" (keyup)="filterMarkets()" placeholder="Search Market Code" >
   </div>
 
   <table *ngIf="filteredMarketsData.length > 0">
@@ -30,7 +30,7 @@
 
 
   
-  <ul>
+  <ul class="market-data">
     <li *ngIf="i >= 0">Today, the price change percentage is positive for {{ i }} markets.</li>
     <li *ngIf="filteredMarketsData.length > 0">
       The market with the highest increase ({{ calculateMaxIncreaseMarket(filteredMarketsData).change24hPercent }}) is {{ calculateMaxIncreaseMarket(filteredMarketsData).marketCode }}.
@@ -56,4 +56,4 @@
   <div *ngIf="filteredMarketsData.length === 0">
     There is no matched value!
   </div>
-  
+</div>

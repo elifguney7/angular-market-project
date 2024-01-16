@@ -4,23 +4,53 @@
 }
 
 table {
-    margin-left: 10%;
     margin-bottom: 1%;
     margin-top: 1%;
     width:80%;
     border-collapse: collapse;
     font-size: 16px;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+table a {
+  color: var(--color-light-gray);
 }
   
-  th,
-  td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
+table th {
+  background-color: var(--color-light-gray);
+  font-weight: 500;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
+  height: 30px;
+
+}
+
+.searchbar input{
+  min-width: 400px;
+  min-height: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 10%; 
+  font-size: 18px;
+}
+
+.market-data {
+  padding-top: 3rem;
+}
+
+.market-data li {
+  font-size: 18px;
+  margin-top: 0.75rem;
+}
   
-  th {
-    background-color: #f2f2f2;
-  }
+
   
