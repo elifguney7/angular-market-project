@@ -1,10 +1,17 @@
 *{    
     display: block;
     background-color: #0a2363;
-    color: #ffffff;
-    padding: 0.5%;
 }
 
+.header-cont {
+    color: #ffffff ;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
 
 .header-buttons{
     display: flex;    
